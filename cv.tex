@@ -28,7 +28,7 @@
 \addtolength{\evensidemargin}{-0.375in}
 \addtolength{\textwidth}{1in}
 \addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\textheight}{1.7in}
 
 %% \urlstyle{same}
 
@@ -38,8 +38,8 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+  \vspace{-0pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-0pt}]
 
 %-------------------------
 % Custom commands
@@ -55,16 +55,16 @@
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
+  \vspace{-0pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
+    \end{tabular*}\vspace{-2pt}
 }
 
 \newcommand{\resumeSubItem}[2]{
   \item\small{
-    \textbf{#1}{: #2 \vspace{-4pt}}
+    \textbf{#1}{: #2 \vspace{-2pt}}
   }
 }
 
@@ -73,7 +73,7 @@
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-0pt}}
 
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -93,7 +93,7 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {Taras Shevchenko National University}{Kyiv, Ukraine}
-      {M.S. in Computer Science; GPA: 4.92/5.0}{Sep 2018 -- Present}
+      {M.S. in Computer Science; GPA: 4.92/5.0}{Sep 2018 -- Jun 2020}
     \resumeSubheading
       {Taras Shevchenko National University}{Kyiv, Ukraine}
       {B.S. in Computer Science;  GPA: 4.97/5.0}{Sep 2014 -- Jun 2018}
@@ -103,6 +103,21 @@
 %-----------EXPERIENCE-----------------
 \section{Experience}
   \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Facebook}{Seattle, WA}
+      {Software Engineer}{Oct 2019 - Present}
+      \resumeItemListStart
+	\resumeItem{Designed and implemented service that computes Probabilistic Flakiness Score in real-time via Bayesian inference.}
+	\resumeItem{Scaled PFS service CPU utilization 10x, latency 20x, number of replicas 7.5x via profiling/caching/parallelism.}
+	\resumeItem{Post with details: https://engineering.fb.com/2020/12/10/developer-tools/probabilistic-flakiness/}
+	\resumeItem{Replaced statistical model with stochastic ML one for sizing(memory-wise) CI workflows.}
+	\resumeItem{New Job Sizer model reduced memory utilization by 30\% and out-of-memory rate by 17\%.}
+	\resumeItem{Achieved another 12\% improvement in MSLE by doing feature engineering for Job Sizer model.}
+	\resumeItem{Prototyped an ML based model for the CI workflow ETA estimation.}
+	\resumeItem{It reduced MSLE by 50\% and allows to control confidence levels of the prediction (thx to Monte-Carlo dropout).}
+	\resumeItem{This gives a way to show uncertanty to user and not only point-estimate (UX research finds this misleading).}
+      \resumeItemListEnd
 
     \resumeSubheading
       {Google}{Sunnyvale, CA}
@@ -141,6 +156,8 @@
         \resumeItem{System monitors execution of user-defined query and publishes results back to data warehouse.}
         \resumeItem{Used for intermediate metrics aggregation to reduce data volumes and speed up queries.}
       \resumeItemListEnd
+
+    \newpage
 
     \resumeSubheading
       {Google}{Sunnyvale, CA}
@@ -210,12 +227,18 @@
 %-----------PROJECTS-----------------
 \section{Projects}
   \resumeSubHeadingListStart
+    \resumeSubItem{PARCS}
+      {Communication Sequential Processes (CSP) like approach for language agnostic distributed computing.}
+    \resumeSubItem{PARCS autodiscovery}
+      {LAN service autodiscovery for nodes in PARCS cluster based on UDP broadcasting.}
     \resumeSubItem{Smart Pacmans}
-      {Visualization of how neural networks can be trained using genetic algorithms.}
+      {Visualization of how neural networks can be trained using genetic algorithms. https://lionell.github.io/smart-pacmans}
     \resumeSubItem{Resolution Theorem Prover}
       {Based on sequential method and operates in classic first-order logic.}
     \resumeSubItem{Pollard-Rho}
       {Parallel implementation of Pollard-Rho algorithm in Go. \textbf{Extra}: Ethereum smart-contract impl.}
+    \resumeSubItem{Huffman+RLE}
+      {Small (1\% on average) optimization for Huffman algorithm followed by run-length-encoding.}
     \resumeSubItem{Parallel PageRank}
       {Based on MPI and OpenMP. Ultimate goal was to compute Wikipedia pagerank.}
     \resumeSubItem{Aqua Lang}
